@@ -4,3 +4,6 @@ services:
     build:
       dockerfile: docker/frontend/Dockerfile
       context: ./
+    user: ${CURRENT_UID}
+    volumes:
+      - ./frontend:/opt/frontend

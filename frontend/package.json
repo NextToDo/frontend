@@ -1,0 +1,27 @@
+{
+  "name": "next_todo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NextToDo/NextToDo.git"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "Fedcomp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NextToDo/NextToDo/issues"
+  },
+  "homepage": "https://github.com/NextToDo/NextToDo#readme",
+  "devDependencies": {
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}
