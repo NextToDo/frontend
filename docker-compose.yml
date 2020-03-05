@@ -7,3 +7,5 @@ services:
     user: ${CURRENT_UID}
     volumes:
       - ./frontend:/opt/frontend
+    ports:
+      - 4000:4000
