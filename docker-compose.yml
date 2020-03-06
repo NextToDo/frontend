@@ -1,9 +1,7 @@
 version: '3'
 services:
   frontend:
-    build:
-      dockerfile: docker/frontend/Dockerfile
-      context: ./
+    build: frontend
     user: ${CURRENT_UID}
     volumes:
       - ./frontend:/opt/frontend
