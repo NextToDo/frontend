@@ -4,14 +4,19 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = {
   mode: "development", // "production" | "development" | "none"
+  entry: {
+    main: './src/index.js',
+    playground: './src/playground.js'
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js"
+    filename: "[name].js"
   },
   devtool: "inline-source-map",
   plugins: [
     new CopyPlugin([
       { from: 'src/index.html' },
+      { from: 'src/playground.html' },
     ]),
     new BundleAnalyzerPlugin()
   ],
