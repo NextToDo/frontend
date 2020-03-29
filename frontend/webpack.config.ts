@@ -1,8 +1,9 @@
-const path = require('path');
+import * as path from 'path';
+import * as webpack from 'webpack';
 const CopyPlugin = require('copy-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-module.exports = {
+const config: webpack.Configuration = {
   mode: "development", // "production" | "development" | "none"
   entry: {
     main: './src/index.tsx',
@@ -52,3 +53,5 @@ module.exports = {
     port: 4000
   }
 }
+
+export default config;
