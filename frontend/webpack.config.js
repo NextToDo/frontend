@@ -5,8 +5,8 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 module.exports = {
   mode: "development", // "production" | "development" | "none"
   entry: {
-    main: './src/index.js',
-    playground: './src/playground.js'
+    main: './src/index.tsx',
+    playground: './src/playground.tsx'
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -29,6 +29,11 @@ module.exports = {
           loader: 'babel-loader',
           options: { presets: ['@babel/preset-env'] }
         }
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        loaders: ['ts-loader']
       }
     ]
   },
@@ -39,6 +44,7 @@ module.exports = {
       // Must be below test-utils
       "react-dom": "preact/compat",
     },
+    extensions: [".ts", ".tsx", ".js"]
   },
   devServer: {
     // contentBase: path.join(__dirname, 'dist'),
