@@ -17,30 +17,14 @@
   ],
   "author": "Fedcomp",
   "license": "MIT",
-  "babel": {
-    "plugins": [
-      [
-        "@babel/plugin-transform-react-jsx",
-        {
-          "pragma": "h",
-          "pragmaFrag": "Fragment"
-        }
-      ]
-    ]
-  },
   "bugs": {
     "url": "https://github.com/NextToDo/NextToDo/issues"
   },
-  "browserslist": "> 0.25%, not dead",
   "homepage": "https://github.com/NextToDo/NextToDo#readme",
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-transform-react-jsx": "^7.9.4",
-    "@babel/preset-env": "^7.9.0",
     "@types/node": "^13.9.5",
     "@types/webpack": "^4.41.9",
     "@types/webpack-dev-server": "^3.10.1",
-    "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^5.1.1",
     "preact": "^10.3.4",
     "ts-loader": "^6.2.2",
