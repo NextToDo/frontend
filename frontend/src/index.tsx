@@ -1,9 +1,5 @@
-import { h, render, Component } from 'preact';
+import { h, render } from 'preact'
 
-class App extends Component {
-  render() {
-    return <h1>Hello, world!</h1>;
-  }
-}
+const App = () => <h1>Hello, world!</h1>;
 
-render(<App />, document.body);
+render(<App />, document.body)
