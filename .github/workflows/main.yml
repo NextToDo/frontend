@@ -1,0 +1,14 @@
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    name: build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 'v12.16.2'
+      - name: Install npm packages
+        run: cd frontend && npm install
+      - name: Build frontend
+        run: cd frontend && npm run build
