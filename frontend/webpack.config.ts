@@ -3,7 +3,7 @@ import { Configuration as WebpackConfiguration } from 'webpack'
 const CopyPlugin = require('copy-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
-let plugins = [
+const plugins = [
   new CopyPlugin([
     { from: 'src/index.html' },
     { from: 'src/playground.html' }
@@ -25,7 +25,7 @@ const config: WebpackConfiguration = {
     filename: '[name].js'
   },
   devtool: 'inline-source-map',
-  plugins: plugins,
+  plugins,
   module: {
     rules: [
       {
